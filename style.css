@@ -1,0 +1,10 @@
+#text1 {
+    position: absolute;
+    width: 280px;
+    height: 80px;
+    right: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 50px;
+}
