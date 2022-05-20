@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(249, 249, 3);
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="style.css">
+<img id="pic" src="1.jpeg" width="600" height="600">
+<div id="text1">写真で一言</div>
+<script>
+    let answer = new Audio("answer.mp3");
+    const img = ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg"
+        , "7.jpeg", "8.jpeg", "9.jpeg", "10.jpeg", "11.jpeg", "12.jpeg", "13.jpg", "14.jpg"];
+        let timer;
+    timer = setInterval(kirikae, 10);
+    function kirikae() {
+        let count = Math.floor(Math.random() * img.length);
+        if (count == img.length);
+        pic.src = img[count];
+    }
+    document.addEventListener('keydown', (event) => {
+        if (event.keyCode === 32) {
+            console.log("aaaaaaa")
+            stop1();
+        }
+    })
+    function stop1 () {
+        clearInterval(timer)
+        answer.play();
+
+    }
+</script>
+</html>
